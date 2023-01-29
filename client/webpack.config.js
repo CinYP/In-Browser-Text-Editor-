@@ -24,7 +24,7 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        title: 'Hot Module Reloading',
+        title: 'Jate Text Editor',
         template: './index.html',
       }),
 
@@ -67,10 +67,10 @@ module.exports = () => {
           test: /\.css$/i,
           use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
-        {
-          test: /\.(png|svg|jpg|jpeg|gif)$/i,
-          type: 'asset/resource',
-        },
+        // {
+        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        //   type: 'asset/resource',
+        // },
         {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,
