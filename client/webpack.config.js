@@ -1,6 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+//const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
@@ -54,8 +54,8 @@ module.exports = () => {
         ],
       }),
 
-      new MiniCssExtractPlugin(),
-    ],
+    //   new MiniCssExtractPlugin(),
+ ],
 
     module: {
       rules: [
@@ -63,10 +63,10 @@ module.exports = () => {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
-        {
-          test: /\.css$/i,
-          use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        },
+        // {
+        //   test: /\.css$/i,
+        //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        // },
         // {
         //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
         //   type: 'asset/resource',
