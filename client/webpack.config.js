@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
@@ -22,6 +23,12 @@ module.exports = () => {
         template: './index.html',
         title: 'Webpack Plugin',
       }),
+      // new HtmlWebpackPlugin({
+      //   title: 'Hot Module Reloading',
+      //   template: './index.html',
+      // }),
+      //Is this one or the other or do I need both? 
+      new MiniCssExtractPlugin(),
     ],
 
     module: {
@@ -29,6 +36,10 @@ module.exports = () => {
         {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
+        },
+        {
+          test: /\.css$/i,
+          use: [MiniCssExtractPlugin.loader, 'css-loader'],
         },
         {
           test: /\.(png|svg|jpg|jpeg|gif)$/i,
