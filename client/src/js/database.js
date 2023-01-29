@@ -15,10 +15,10 @@ const initdb = async () =>
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {console.error('putDb not implemented');
 
-//const db = await openDB();
+const db = await openDB();
 
-// const result = await request;
-//   console.log('🚀 - data saved to the database', result);
+const result = await request;
+  console.log('🚀 - data saved to the database', result);
 
 };
 

@@ -23,15 +23,14 @@ module.exports = () => {
       hot: 'only',
     },
     plugins: [
-      new HtmlWebpackPlugin({
-        template: './index.html',
-        title: 'Webpack Plugin',
-      }),
       // new HtmlWebpackPlugin({
-      //   title: 'Hot Module Reloading',
       //   template: './index.html',
+      //   title: 'Webpack Plugin',
       // }),
-      //Is this one or the other or do I need both? 
+      new HtmlWebpackPlugin({
+        title: 'Hot Module Reloading',
+        template: './index.html',
+      }),
       new MiniCssExtractPlugin(),
     ],
 
