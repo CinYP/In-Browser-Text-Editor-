@@ -18,10 +18,6 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
-    devServer: {
-      // The `hot` option is to use the webpack-dev-server in combination with the hot module replacement API.
-      hot: 'only',
-    },
     plugins: [
       new HtmlWebpackPlugin({
         title: 'Jate Text Editor',
@@ -54,7 +50,6 @@ module.exports = () => {
         ],
       }),
 
-    //   new MiniCssExtractPlugin(),
  ],
 
     module: {
@@ -63,14 +58,10 @@ module.exports = () => {
           test: /\.css$/i,
           use: ['style-loader', 'css-loader'],
         },
-        // {
-        //   test: /\.css$/i,
-        //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        // },
-        // {
-        //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        //   type: 'asset/resource',
-        // },
+        {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
         {
           test: /\.m?js$/,
           exclude: /(node_modules|bower_components)/,

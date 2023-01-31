@@ -5,7 +5,7 @@
     "build": "webpack --mode production",
     "start": "webpack --watch"
   },
-  "author": "2U",
+  "author": "Cinthia Pruitt",
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/core": "^7.15.0",
