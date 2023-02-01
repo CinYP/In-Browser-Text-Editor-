@@ -23,7 +23,7 @@ npm run start
 
 ## Deployed Link 
 
-The link to the deployed application on Heroku is: 
+The link to the deployed application on Heroku is: https://immense-crag-34340.herokuapp.com/
 
 # Walk Through Video 
 
